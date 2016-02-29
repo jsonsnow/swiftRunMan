@@ -28,6 +28,11 @@ class RMRegisterController: UIViewController {
     @IBAction func clickCompleteBtn(sender: AnyObject) {
         
         weak var mySelf = self
+        let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        hud.mode = MBProgressHUDModeAnnularDeterminate
+        hud.labelText = "正在注册"
+        hud.hide(true, afterDelay: 1)
+        weak var weakHud = hud
         RMUser.getSharedInstace().userName = self.userRegistrNameLable.text
         RMUser.getSharedInstace().userPassWord = self.userRegisterPasswdLabel.text
         RMUser.getSharedInstace().isLogin = false
@@ -38,12 +43,22 @@ class RMRegisterController: UIViewController {
                 
             case LOGInResult.LOGInResultConnectError:
                 print("连接失败")
+                weakHud?.mode = MBProgressHUDModeText
+                weakHud?.labelText = "连接失败"
+                weakHud?.hide(true, afterDelay: 1)
+                
             case LOGInResult.RegisterResultError:
                 print("授权失败")
+                weakHud?.mode = MBProgressHUDModeText
+                weakHud?.labelText = "授权失败"
+                weakHud?.hide(true, afterDelay: 1)
+                
             case LOGInResult.RegisterResultSuccess:
-                    
-                    print("注册成功")
-                    mySelf?.dismissViewControllerAnimated(true, completion: nil)
+                print("注册成功")
+                weakHud?.mode = MBProgressHUDModeText
+                weakHud?.labelText = "注册成功"
+                weakHud?.hide(true, afterDelay: 1)
+                mySelf?.dismissViewControllerAnimated(true, completion: nil)
 
             default:
                 print("其他错误")

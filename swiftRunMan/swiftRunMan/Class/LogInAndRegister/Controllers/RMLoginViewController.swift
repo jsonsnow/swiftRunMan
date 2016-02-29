@@ -33,6 +33,13 @@ class RMLoginViewController: UIViewController{
     }
     @IBAction func clickLogInBtn(sender: AnyObject) {
         
+        let weakSelf = self
+        let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        hud.mode = MBProgressHUDModeAnnularDeterminate
+        hud.labelText = "正在登陆"
+        hud.hide(true, afterDelay: 1)
+        hud.color = UIColor.whiteColor()
+        weak var weakHud = hud
         print("userName:\(userNameLabel.text!),password:\(userPassWordLabel.text!)")
         RMUser.getSharedInstace().userName = userNameLabel.text
         RMUser.getSharedInstace().userPassWord = userPassWordLabel.text
@@ -45,10 +52,24 @@ class RMLoginViewController: UIViewController{
                 
             case LOGInResult.LOGInResultConnectError:
                 print("连接失败")
+                weakHud?.mode = MBProgressHUDModeText
+                weakHud?.labelText = "连接失败"
+                weakHud?.hide(true, afterDelay: 1)
+                
             case LOGInResult.LOGInResultAuthError:
                 print("授权失败")
+                weakHud?.mode = MBProgressHUDModeText
+                weakHud?.labelText = "授权失败"
+                weakHud?.hide(true, afterDelay: 1)
+                
             case LOGInResult.LOGInResultSuccess:
                 print("登录成功")
+                weakHud?.mode = MBProgressHUDModeText
+                weakHud?.labelText = "登录成功"
+                weakHud?.hide(true, afterDelay: 1)
+                weakSelf.loginSuccess()
+                
+                
             default:
                 print("其他错误")
                 
@@ -60,7 +81,6 @@ class RMLoginViewController: UIViewController{
        
     func loginSuccess() {
         
-        print("登录成功")
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         UIApplication.sharedApplication().keyWindow?.rootViewController = storyboard.instantiateViewControllerWithIdentifier("Login")
         

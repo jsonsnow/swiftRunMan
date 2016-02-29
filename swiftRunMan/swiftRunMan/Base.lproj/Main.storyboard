@@ -35,6 +35,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3x-fd-MiF">
+                                <rect key="frame" x="350" y="260" width="100" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Fv6-7f-zLE"/>
+                                    <constraint firstAttribute="width" constant="100" id="JXQ-x0-O1t"/>
+                                    <constraint firstAttribute="height" constant="30" id="VA4-sq-Otn"/>
+                                </constraints>
+                                <state key="normal" title="注册"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Fv6-7f-zLE"/>
+                                    </mask>
+                                </variation>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xy2-Ce-CHQ">
                                 <rect key="frame" x="150" y="260" width="100" height="30"/>
                                 <animations/>
@@ -49,21 +64,6 @@
                                     <mask key="constraints">
                                         <exclude reference="P2b-5b-WNN"/>
                                         <exclude reference="Pvx-mX-Gmt"/>
-                                    </mask>
-                                </variation>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3x-fd-MiF">
-                                <rect key="frame" x="350" y="260" width="100" height="30"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Fv6-7f-zLE"/>
-                                    <constraint firstAttribute="width" constant="100" id="JXQ-x0-O1t"/>
-                                    <constraint firstAttribute="height" constant="30" id="VA4-sq-Otn"/>
-                                </constraints>
-                                <state key="normal" title="注册"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Fv6-7f-zLE"/>
                                     </mask>
                                 </variation>
                             </button>
