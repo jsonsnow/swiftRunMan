@@ -25,6 +25,9 @@ class RMXMPPManager: NSObject,XMPPStreamDelegate{
     
     weak var loginDeleage:RMXMPPLoginDelegate?
     var xmppStream:XMPPStream!
+    var xmppRoserStore:XMPPRosterCoreDataStorage!
+    var xmppRoser:XMPPRoster!
+    
     var logInBlock:((theResult:LOGInResult) -> Void)?
     static var onceToKen:dispatch_once_t = 0
     static var manager  :RMXMPPManager? = nil
@@ -70,6 +73,9 @@ class RMXMPPManager: NSObject,XMPPStreamDelegate{
       
         xmppStream = XMPPStream()
         xmppStream.addDelegate(self, delegateQueue: dispatch_get_main_queue())
+        self.xmppRoserStore = XMPPRosterCoreDataStorage.sharedInstance()
+        self.xmppRoser = XMPPRoster(rosterStorage: xmppRoserStore)
+        xmppRoser.activate(xmppStream)
         
     }
     //连接服务器

@@ -154,6 +154,7 @@
 		8C26BF4E1C83D32F0096869E /* MBProgressHUD+KR.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26BF4A1C83D32F0096869E /* MBProgressHUD+KR.m */; };
 		8C26BF4F1C83D32F0096869E /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8C26BF4B1C83D32F0096869E /* MBProgressHUD.bundle */; };
 		8C26BF501C83D32F0096869E /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26BF4D1C83D32F0096869E /* MBProgressHUD.m */; };
+		8C26BF571C83E9EA0096869E /* RMRoserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C26BF561C83E9EA0096869E /* RMRoserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -447,6 +448,7 @@
 		8C26BF4B1C83D32F0096869E /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
 		8C26BF4C1C83D32F0096869E /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		8C26BF4D1C83D32F0096869E /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		8C26BF561C83E9EA0096869E /* RMRoserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMRoserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -500,6 +502,7 @@
 		8C26BB3C1C8285AB0096869E /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				8C26BF511C83E9850096869E /* Main */,
 				8C26BD781C83D2F20096869E /* Lib */,
 				8C26BD1E1C829ED10096869E /* Ohters */,
 				8C26BB3D1C8285AB0096869E /* LogInAndRegister */,
@@ -1376,6 +1379,46 @@
 			path = MBProgessHUD;
 			sourceTree = "<group>";
 		};
+		8C26BF511C83E9850096869E /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8C26BF551C83E9C40096869E /* Util */,
+				8C26BF541C83E9C00096869E /* Model */,
+				8C26BF531C83E9BB0096869E /* Views */,
+				8C26BF521C83E9B70096869E /* controllers */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		8C26BF521C83E9B70096869E /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8C26BF561C83E9EA0096869E /* RMRoserViewController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		8C26BF531C83E9BB0096869E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8C26BF541C83E9C00096869E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8C26BF551C83E9C40096869E /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1587,6 +1630,7 @@
 				8C26BF331C83D2F20096869E /* DDList.m in Sources */,
 				8C26BF2D1C83D2F20096869E /* XMPPAttentionModule.m in Sources */,
 				8C26BF0B1C83D2F20096869E /* XMPPResultSet.m in Sources */,
+				8C26BF571C83E9EA0096869E /* RMRoserViewController.swift in Sources */,
 				8C26BEFA1C83D2F20096869E /* XMPPMessage+XEP0045.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
