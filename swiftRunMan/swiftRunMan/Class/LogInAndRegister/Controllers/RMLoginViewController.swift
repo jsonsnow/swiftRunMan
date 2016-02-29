@@ -82,7 +82,7 @@ class RMLoginViewController: UIViewController{
     func loginSuccess() {
         
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-        UIApplication.sharedApplication().keyWindow?.rootViewController = storyboard.instantiateViewControllerWithIdentifier("Login")
+        UIApplication.sharedApplication().keyWindow?.rootViewController = storyboard.instantiateViewControllerWithIdentifier("nvc")
         
     }
     

@@ -67,5 +67,23 @@ class RMRoserViewController: UITableViewController,NSFetchedResultsControllerDel
         
         return cell!
   }
+    
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        
+//        
+//        let indexPath = self.tableView.indexPathForCell(cell)
+//        let chatController:RMChatViewController = segue.destinationViewController
+//        chatController.friendJid =
+//        
+//    }
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        
+        let chatController = RMChatViewController()
+        let roser = resultController.fetchedObjects![indexPath.row]
+        chatController.friendJid = roser.jid()
+        self.navigationController?.pushViewController(chatController, animated: true)
+        
+    }
    
 }

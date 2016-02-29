@@ -155,6 +155,7 @@
 		8C26BF4F1C83D32F0096869E /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8C26BF4B1C83D32F0096869E /* MBProgressHUD.bundle */; };
 		8C26BF501C83D32F0096869E /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26BF4D1C83D32F0096869E /* MBProgressHUD.m */; };
 		8C26BF571C83E9EA0096869E /* RMRoserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C26BF561C83E9EA0096869E /* RMRoserViewController.swift */; };
+		8C26BFF71C84702D0096869E /* RMChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C26BFF61C84702D0096869E /* RMChatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -449,6 +450,7 @@
 		8C26BF4C1C83D32F0096869E /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		8C26BF4D1C83D32F0096869E /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		8C26BF561C83E9EA0096869E /* RMRoserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMRoserViewController.swift; sourceTree = "<group>"; };
+		8C26BFF61C84702D0096869E /* RMChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMChatViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1394,6 +1396,7 @@
 			isa = PBXGroup;
 			children = (
 				8C26BF561C83E9EA0096869E /* RMRoserViewController.swift */,
+				8C26BFF61C84702D0096869E /* RMChatViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -1628,6 +1631,7 @@
 				8C26BED01C83D2F20096869E /* NSNumber+XMPP.m in Sources */,
 				8C26BF061C83D2F20096869E /* XMPPvCardTempEmail.m in Sources */,
 				8C26BF331C83D2F20096869E /* DDList.m in Sources */,
+				8C26BFF71C84702D0096869E /* RMChatViewController.swift in Sources */,
 				8C26BF2D1C83D2F20096869E /* XMPPAttentionModule.m in Sources */,
 				8C26BF0B1C83D2F20096869E /* XMPPResultSet.m in Sources */,
 				8C26BF571C83E9EA0096869E /* RMRoserViewController.swift in Sources */,

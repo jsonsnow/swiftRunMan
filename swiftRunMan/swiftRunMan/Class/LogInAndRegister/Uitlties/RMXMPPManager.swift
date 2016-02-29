@@ -27,6 +27,8 @@ class RMXMPPManager: NSObject,XMPPStreamDelegate{
     var xmppStream:XMPPStream!
     var xmppRoserStore:XMPPRosterCoreDataStorage!
     var xmppRoser:XMPPRoster!
+    var xmppMessage:XMPPMessageArchiving!
+    var xmppMessageStore:XMPPMessageArchivingCoreDataStorage!
     
     var logInBlock:((theResult:LOGInResult) -> Void)?
     static var onceToKen:dispatch_once_t = 0
@@ -76,6 +78,10 @@ class RMXMPPManager: NSObject,XMPPStreamDelegate{
         self.xmppRoserStore = XMPPRosterCoreDataStorage.sharedInstance()
         self.xmppRoser = XMPPRoster(rosterStorage: xmppRoserStore)
         xmppRoser.activate(xmppStream)
+        
+        self.xmppMessageStore = XMPPMessageArchivingCoreDataStorage.sharedInstance()
+        self.xmppMessage  = XMPPMessageArchiving(messageArchivingStorage:self.xmppMessageStore);
+        xmppMessage.activate(xmppStream)
         
     }
     //连接服务器
